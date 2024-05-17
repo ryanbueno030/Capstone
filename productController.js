@@ -58,7 +58,7 @@ router.post('/', (req, res) => {
 
                     // Generate QR code for the product
                     const productID = productResult.insertId;
-                    const qrURL = 'https://facebook.com'; // URL to redirect when scanning QR code
+                    const qrURL = 'localhost:4200/main/viewshoe'; // URL to redirect when scanning QR code
                     const qrImage = qr.image(qrURL, { type: 'png' });
                     const qrImagePath = `./qr-codes/product_${productID}.png`;
 
